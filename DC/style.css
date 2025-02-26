@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    height: 72px;
+    width: 100%;
+    background: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+   
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #616060;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #007BFF;
+}
+
+/* Hamburger Menu (for mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #616060;
+}
+
+/* Hero Section */
+.demo-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.demo-bg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top: 1px solid black;
+}
+
+/* Cards Section */
+.cards {
+    background-color: whitesmoke;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .sidebar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar.active {
+        display: flex;
+    }
+}
